@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@font-face {
+    font-family: Valorant;
+    src: url(./Valorant\ Font.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Valorant;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(./images/container.png);
+    background-size: cover;
+}
+#card{
+    background: url(./images/bg.png);
+    background-size: cover;
+    display: flex;
+    width: 375px;
+    height: 625px;
+    border: 2px solid black;
+    transition: width 2s;
+    padding: 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#card:hover{
+    width: 1000px;
+}
+#card:hover .abilities{
+    opacity: 0;
+    visibility: hidden;
+}
+.agent{
+    background: url(./images/phoenix/phoenix.png);
+    width: 375px; 
+    height: 625px;
+    background-size: cover;
+    color: rgb(219, 217, 217);
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: Valorant;
+    z-index: 100;
+}
+.agent::after{
+    background: linear-gradient(to top,black,transparent);
+    z-index: 102;
+}
+.info {
+    margin: 20px;
+}
+.name{
+    font-size: 2rem;
+}
+#card:hover .info{
+    text-align: center;
+}
+#card:hover .name{
+    font-size: 2.3rem;
+}
+#card:hover h3{
+    font-size: 1.4rem;
+}
+.abilities{
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px;
+    transition: visibility 2s,opacity 1s ease-in-out;
+}
+.abilities img{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+}
+.shadow{
+    z-index: 105;
+    background: linear-gradient(to top,black,rgb(78, 75, 75),rgba(17, 17, 17, 0.041));
+    position: relative;
+    top: 430px;
+    height: 172px;
+}
+#card:hover .details{
+    display: flex;
+}
+.details{
+    /* background: url(./images/bg.png); */
+    display: none;
+    flex-direction: column;
+    background-size: cover;
+    color: whitesmoke;
+    width: 630px;
+    height: 625px;
+    position: relative;
+    /* transition: all 6s; */
+}
+.details .bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 20px;
+}
+.details .bio::before{
+    content: "//Bio";
+    font-size: 1.2rem;
+    color: rgba(243, 88, 88, 0.822);
+}
+.details .bio h2,p{
+    margin: 5px;
+}
+.details .bio p{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+.details .powers::before{
+    content: "//Abilities";
+    font-size: 1.2rem;
+    color: rgba(243, 88, 88, 0.822);
+}
+.details .powers{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.details .power{
+    display: flex;
+    max-height: 90px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.details .power img{
+    border-radius: 8px;
+}
+.details .power .specify{
+    display: flex;
+    flex-direction: column;
+}
+.details .power .specify h2{
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+.details .power .specify p{
+    font-size: 0.7rem;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+.prev,.next{
+    margin: 10px;
+    padding: 15px;
+}
+.phoenix{
+    background: url(./images/phoenix/phoenix.png);
+    width: 375px; 
+    height: 625px;
+    background-size: cover;
+    color: rgb(219, 217, 217);
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: Valorant;
+    z-index: 100;
+}
+.jett{
+    background: url(./images/jett/jett.png);
+    width: 375px; 
+    height: 625px;
+    background-size: cover;
+    color: rgb(219, 217, 217);
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: Valorant;
+    z-index: 100;
+}
+.omen{
+    background: url(./images/omen/omen.png);
+    width: 375px; 
+    height: 625px;
+    background-size: cover;
+    color: rgb(219, 217, 217);
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: Valorant;
+    z-index: 100;
+}
+.cypher{
+    background: url(./images/cypher/cypher.png);
+    width: 375px; 
+    height: 625px;
+    background-size: cover;
+    color: rgb(219, 217, 217);
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: Valorant;
+    z-index: 100;
+}
+section{
+    overflow: hidden;
+    width: 375px;
+    height: 625px;
+    transition: width 2s;
+    box-shadow: 1px 1px 19px rgb(255, 99, 99);
+    border-radius: 15px;
+}
+section:hover{
+    width: 1000px;
+    
+}
+@media screen and (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        height: 220vh;
+    }
+    section{
+        overflow: hidden;
+        width: 350px;
+        height: 625px;
+        margin-top: 50px;
+        order: 1;
+    }
+    section:hover{
+        width: 350px;
+        height: 1600px;
+    }
+    #card{
+        width: 100%;
+        height: 1600px;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #card:hover{
+        width: 100%;
+        height: 1600px;
+    }
+    #card:hover .abilities{
+        opacity: 1;
+        visibility: visible;
+    }
+    .agent{
+        width: 350px; 
+        height: 625px;
+        background-size: cover;
+        color: rgb(219, 217, 217);
+        border-radius: 15px;
+        border-bottom-right-radius: 0px;
+        position: relative;
+        top: 0;
+        left: 0;
+        font-family: Valorant;
+        z-index: 100;
+    }
+    .agent::after{
+        background: none;
+        z-index: 102;
+    }
+    .info {
+        margin: 20px;
+    }
+    .name{
+        font-size: 2rem;
+    }
+    #card:hover .info{
+        text-align:left;
+    }
+    #card:hover .name{
+        font-size: 2rem;
+    }
+    #card:hover h3{
+        font-size: 1rem;
+    }
+    .abilities{
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        justify-content:unset;
+        margin: 0px 5px;
+        transition: visibility 2s,opacity 1s ease-in-out;
+    }
+    .abilities img{
+        margin: 0px 5px;
+    }
+    #card:hover .details{
+        display: flex;
+    }
+    .details{
+        width: 350px;
+        height: 1025px;
+    }
+    .details .bio{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 20px;
+    }
+    .details .bio h2,p{
+        margin: 10px 10px;
+    }
+    .details .powers{
+        position: relative;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    .details .power{
+        display: flex;
+        max-height: 100px;
+        margin-top: 50px;
+        cursor: pointer;
+    }
+    .details .power img{
+        border-radius: 8px;
+    }
+    .details .power .specify{
+        display: flex;
+        flex-direction: column;
+        overflow-wrap: break-word;
+    }
+    .details .power .specify h2{
+        font-size: 1.2rem;
+        margin-left: 10px;
+    }
+
+    .prev,.next{
+        width: 20%;
+        
+        padding: 15px;
+        
+    }
+    .next{
+        margin-top: 25px;
+        order: 2;
+    }
+    .next::after{
+        content: 'Next';
+        color: red;
+    }
+    .prev{
+        order: 3;
+    }
+    .prev::after{
+        content: 'Previous';
+        color: red;
+    }
+}
